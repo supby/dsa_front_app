@@ -1,3 +1,3 @@
 # dsa_front_app
 
-Fron-End application for Deep Sport Analitics project. It is built on AngularJS 2.
+Front-End application for Deep Sport Analytics project. It is built on AngularJS 2.

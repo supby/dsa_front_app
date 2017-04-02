@@ -1,0 +1,23 @@
+<div class="col-md-4">
+  <table class="table table-striped">
+    <caption>Caption</caption>
+    <thead>
+      <tr>
+        <th>
+          <button type="button" class="btn btn-primary btn-sm">Game date</button>
+        </th>
+        <th>Team 1 Name</th>
+        <th>Team 2 Name</th>
+        <th>Win Probability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of data.rows">
+        <td>{{row.gameDate}}</td>
+        <td>{{row.firstTeamName}}</td>
+        <td>{{row.secondTeamName}}</td>
+        <td>{{row.winProbability}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Prediction } from './prediction';
+import { PredictionParams } from './prediction';
 import { PredictionService } from './prediction.service';
 
 @Component({
@@ -9,11 +9,11 @@ import { PredictionService } from './prediction.service';
 })
 
 export class PredictionsComponent implements OnInit {
-  predictionsList: Prediction[];
+  predictionsList: PredictionParams[];
 
   constructor(private predictionService: PredictionService) {}
 
   ngOnInit(): void {
-    this.predictionsList = this.predictionService.getPredictionsList();
+    this.predictionsList = this.predictionService.getPredictionParamsList();
   }
 }

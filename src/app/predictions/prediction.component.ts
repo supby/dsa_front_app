@@ -1,16 +1,23 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
-import { Prediction } from './prediction';
+import { PredictionParams } from './prediction';
+import { PredictionRow } from './prediction-row';
 import { PredictionService } from './prediction.service';
 
 @Component({
-  //moduleId: module.id,
   selector: 'prediction',
   templateUrl: './prediction.component.html'
 })
-export class PredictionComponent {
+export class PredictionComponent implements OnInit {
   @Input()
-  data: Prediction;
+  inputData: PredictionParams;
+
+  data: Observable<PredictionRow[]>;
 
   constructor(private predictionService: PredictionService) {}
+
+  ngOnInit(): void {
+    this.data = this.predictionService.getPredictionRows(this.inputData);
+  }
 }

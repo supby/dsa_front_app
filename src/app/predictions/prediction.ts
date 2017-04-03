@@ -1,8 +1,5 @@
-import { PredictionRow } from './prediction-row';
-export class Prediction {
-
+export class PredictionParams {
   gameType: string;
   gameDateFrom: string;
   gameDateTo: string;
-  rows: PredictionRow[];
 }

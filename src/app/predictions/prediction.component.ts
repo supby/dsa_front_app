@@ -11,13 +11,13 @@ import { PredictionService } from './prediction.service';
 })
 export class PredictionComponent implements OnInit {
   @Input()
-  inputData: PredictionParams;
+  params: PredictionParams;
 
   data: Observable<PredictionRow[]>;
 
   constructor(private predictionService: PredictionService) {}
 
   ngOnInit(): void {
-    this.data = this.predictionService.getPredictionRows(this.inputData);
+    this.data = this.predictionService.getPredictionRows(this.params);
   }
 }

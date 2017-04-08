@@ -1,6 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule }    from '@angular/http';
+import { FormsModule }   from '@angular/forms';
 import { DatepickerModule } from 'ngx-bootstrap';
 
 import { AppComponent }  from './app.component';
@@ -12,7 +13,8 @@ import { PredictionService } from './predictions/prediction.service';
   imports: [
     BrowserModule,
     HttpModule,
-    DatepickerModule.forRoot()
+    FormsModule,
+    DatepickerModule
   ],
   declarations: [
     AppComponent,

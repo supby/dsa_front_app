@@ -12,8 +12,9 @@ import { PredictionService } from './prediction.service';
 export class PredictionComponent implements OnInit {
   @Input()
   params: PredictionParams;
-
   data: Observable<PredictionRow[]>;
+
+  public dt: Date = new Date();
 
   constructor(private predictionService: PredictionService) {}
 

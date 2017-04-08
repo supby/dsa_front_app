@@ -14,7 +14,7 @@ import { PredictionService } from './predictions/prediction.service';
     BrowserModule,
     HttpModule,
     FormsModule,
-    DatepickerModule
+    DatepickerModule.forRoot()
   ],
   declarations: [
     AppComponent,

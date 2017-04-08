@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import * as moment from 'moment';
 
 import { PredictionParams } from './prediction';
 import { PredictionRow } from './prediction-row';
@@ -19,6 +20,19 @@ export class PredictionComponent implements OnInit {
   constructor(private predictionService: PredictionService) {}
 
   ngOnInit(): void {
+    this.data = this.predictionService.getPredictionRows(this.params);
+  }
+
+  gameDateChanged(e: Date): void {
+    const selectedDate = moment(e);
+
+    const newParams = new PredictionParams();
+    newParams.gameType = this.params.gameType;
+    newParams.gameDateFrom = selectedDate.format('YYYY-MM-DD');
+    newParams.gameDateTo = selectedDate.add(1, 'days').format('YYYY-MM-DD');
+
+    this.params = newParams;
+
     this.data = this.predictionService.getPredictionRows(this.params);
   }
 }

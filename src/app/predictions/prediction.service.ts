@@ -15,7 +15,7 @@ export class PredictionService {
   getPredictionRows(p: PredictionParams): Observable<PredictionRow[]> {
 
     const row = new PredictionRow();
-    row.gameDate = '99999999';
+    row.gameDate = p.gameDateFrom;
     row.firstTeamName = 'Team 1';
     row.secondTeamName = 'Team 2';
     row.winProbability = 67;

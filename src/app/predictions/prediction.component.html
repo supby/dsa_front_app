@@ -4,9 +4,14 @@
     <thead>
       <tr>
         <th>
-          <button type="button" class="btn btn-primary btn-sm">Game date</button>
-          <!--<datepicker [(ngModel)]="dt"></datepicker>-->
-          <datepicker></datepicker>
+          <div class="btn-group" dropdown>
+            <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+              Game Date <span class="caret"></span>
+            </button>
+            <div *dropdownMenu class="dropdown-menu" role="menu">
+              <datepicker [(ngModel)]="dt" (selectionDone)="gameDateChanged($event)"></datepicker>
+            </div>
+          </div>
         </th>
         <th>Team 1 Name</th>
         <th>Team 2 Name</th>

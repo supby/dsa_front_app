@@ -1,3 +1,5 @@
 <div class="row">
-  <prediction *ngFor="let data of predictionsList" [params]="data"></prediction>
+  <div *ngFor="let data of predictionsList" class="col-md-4">
+      <prediction  [params]="data"></prediction>
+  </div>
 </div>

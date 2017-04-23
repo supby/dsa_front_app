@@ -14,6 +14,8 @@ export class PredictionsComponent implements OnInit {
   constructor(private predictionService: PredictionService) {}
 
   ngOnInit(): void {
-    this.predictionsList = this.predictionService.getPredictionParamsList();
+    this.predictionService
+        .getPredictionParamsList()
+        .then(pList => this.predictionsList = pList);
   }
 }

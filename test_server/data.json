@@ -1,0 +1,34 @@
+{
+  "params": [
+    { "gameType": "NHL", "gameDateFrom": "2017-01-01", "gameDateTo": "2017-01-02" },
+    { "gameType": "NBA", "gameDateFrom": "2017-01-01", "gameDateTo": "2017-01-02" },
+    { "gameType": "FIFA", "gameDateFrom": "2017-01-01", "gameDateTo": "2017-01-02" }
+  ],
+  "predictions": [
+    {
+      "gameType": "NHL", "gameDateFrom": "2017-01-01", "gameDateTo": "2017-01-02",
+      "gameDate": "2017-01-01", "firstTeamName": "Team A", "secondTeamName": "Team B",
+      "winProbability": "0.67"
+    },
+    {
+      "gameType": "NHL", "gameDateFrom": "2017-01-01", "gameDateTo": "2017-01-02",
+      "gameDate": "2017-01-01", "firstTeamName": "Tampa Bay", "secondTeamName": "Winipeg",
+      "winProbability": "0.23"
+    },
+    {
+      "gameType": "NHL", "gameDateFrom": "2017-01-01", "gameDateTo": "2017-01-02",
+      "gameDate": "2017-01-01", "firstTeamName": "New York", "secondTeamName": "Team X",
+      "winProbability": "0.87"
+    },
+    {
+      "gameType": "NBA", "gameDateFrom": "2017-01-01", "gameDateTo": "2017-01-02",
+      "gameDate": "2017-01-01", "firstTeamName": "New York NBA", "secondTeamName": "Team 123",
+      "winProbability": "0.11"
+    },
+    {
+      "gameType": "FIFA", "gameDateFrom": "2017-01-01", "gameDateTo": "2017-01-02",
+      "gameDate": "2017-01-01", "firstTeamName": "Real Madrid", "secondTeamName": "Team X9",
+      "winProbability": "0.73"
+    }
+  ]
+}

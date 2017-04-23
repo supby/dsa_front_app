@@ -1,6 +1,6 @@
 <div>
   <table class="table table-striped">
-    <caption>Caption</caption>
+    <caption>{{params.gameType}}</caption>
     <thead>
       <tr>
         <th>
@@ -20,10 +20,10 @@
     </thead>
     <tbody>
       <tr *ngFor="let row of data | async">
-        <td>{{row.gameDate}}</td>
+        <td>{{row.gameDate | date}}</td>
         <td>{{row.firstTeamName}}</td>
         <td>{{row.secondTeamName}}</td>
-        <td>{{row.winProbability}}</td>
+        <td>{{row.winProbability | percent}}</td>
       </tr>
     </tbody>
   </table>

@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { Component, Input, OnInit } from '@angular/core';
 import * as moment from 'moment';
 
 import { PredictionParams } from './prediction';
